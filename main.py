@@ -108,14 +108,31 @@ trigo_menu.add_command(label = 'tan()', command = lambda: add_to_calculation('ta
 trigo_menu.add_separator
 menubar.add_cascade(menu = trigo_menu, label = 'Trigo')
 
-# initialize trigonometric function menu
-atrigo_menu = tk.Menu(menubar, tearoff = 0)
 # initialize inverse trigonometric function menu
+atrigo_menu = tk.Menu(menubar, tearoff = 0)
+# initialize inverse trigonometric functions
 atrigo_menu.add_command(label = 'asin()', command = lambda: add_to_calculation('asin('))
 atrigo_menu.add_command(label = 'acos()', command = lambda: add_to_calculation('acos('))
 atrigo_menu.add_command(label = 'atan()', command = lambda: add_to_calculation('atan('))
 atrigo_menu.add_separator
 menubar.add_cascade(menu = atrigo_menu, label = 'Inverse')
+
+# initialize transcedental number menu
+transcedental_menu = tk.Menu(menubar, tearoff = 0)
+# initialize transcedental numbers
+transcedental_menu.add_command(label = 'pi', command = lambda: add_to_calculation('pi'))
+transcedental_menu.add_command(label = 'e', command = lambda: add_to_calculation('pi'))
+transcedental_menu.add_separator
+menubar.add_cascade(menu = transcedental_menu, label = 'Transcedental')
+
+# initialize logarithmic function menu
+logarithmic_menu = tk.Menu(menubar, tearoff = 0)
+# initialize logarithmic functions
+logarithmic_menu.add_command(label = 'log', command = lambda: add_to_calculation('log(10,'))
+logarithmic_menu.add_command(label = 'ln', command = lambda: add_to_calculation('log(e'))
+logarithmic_menu.add_separator
+menubar.add_cascade(menu = logarithmic_menu, label = 'Logarithm')
+
 
 root.config(menu = menubar)
 
