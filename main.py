@@ -4,6 +4,7 @@ from math import *
 
 calculation = ''
 
+# functions
 # recording and displaying users input
 def add_to_calculation(symbol):
     global calculation
@@ -37,13 +38,14 @@ def on_closing():
         root.destroy()
 
 
+# user interface
 # initialization of GUI
 root = tk.Tk()
 root.geometry('300x275')
 root.title('Calculator')
 
 # initialization of calculator screen
-text_result = tk.Text(root, height = 2, width = 16, font = ('Arial', 24))
+text_result = tk.Text(root, height = 2, width = 16, font = ('Arial', 24), state = 'disabled')
 text_result.grid(columnspan = 5)
 
 
@@ -96,6 +98,7 @@ btn_backspace = tk.Button(root, text = '<--', command = lambda: text_result.dele
 btn_backspace.grid(row = 5, column = 1)
 
 
+# drop-down menu
 # initialize parent menubar
 menubar = tk.Menu(root)
 
@@ -141,4 +144,5 @@ root.config(menu = menubar)
 root.protocol('WM_DELETE_WINDOW', on_closing)
 
 
+# execute main code
 root.mainloop()
