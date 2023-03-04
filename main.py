@@ -91,7 +91,7 @@ btn_equal = tk.Button(root, text = '=', command = lambda: evaluate_calculation()
 btn_equal.grid(row = 5, column = 3)
 
 # QOL buttons
-btn_clear = tk.Button(root, text = 'Clr', command = lambda: clear_field(), width = 5, font = ('Arial', 14))
+btn_clear = tk.Button(root, text = 'clr', command = lambda: clear_field(), width = 5, font = ('Arial', 14))
 btn_clear.grid(row = 5, column = 0)
 # btn_clear.grid(row, column, columnspan = 2)
 btn_backspace = tk.Button(root, text = '<--', command = lambda: text_result.delete('end-2c'), width = 5, font = ('Arial', 14))
